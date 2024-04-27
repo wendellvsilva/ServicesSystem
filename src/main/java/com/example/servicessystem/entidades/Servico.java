@@ -1,16 +1,18 @@
 package com.example.servicessystem.entidades;
 
-
-import java.util.ArrayList;
-
 public class Servico {
     private int id;
     private String nome;
-    private double preco;
     private String categoria;
-
+    private double preco;
     private PrestadorDeServico[] prestadorServico;
 
+    public Servico(int id, String nome, String categoria, double preco) {
+        this.id = id;
+        this.nome = nome;
+        this.categoria = categoria;
+        this.preco = preco;
+    }
 
     public Servico(int id, String nome, String categoria, double preco, PrestadorDeServico[] prestadorServico) {
         this.id = id;
@@ -67,8 +69,6 @@ public class Servico {
         System.out.println("Nome:" + servico.getNome());
         System.out.println("Categoria:" + servico.getCategoria());
         System.out.println("Valor:" + servico.getPreco());
-        System.out.println("Prestador(analise de ter ou n)" + servico.getPrestadorServico() );
+        System.out.println("Prestador(analise de ter ou n): " + (servico.getPrestadorServico() != null ? "Sim" : "Não"));
     }
-
 }
-
