@@ -26,7 +26,7 @@ public class ServicoTest {
     @Test(expected = PrecoInvalidoException.class)
     public void testPrecoInvalido() {
         PrestadorDeServico[] prestadores = new PrestadorDeServico[1];
-        prestadores[0] = new PrestadorDeServico(/* fornecer argumentos do construtor */);
+        prestadores[0] = new PrestadorDeServico();//esperar prestador
 
         //criando preço negativo
         Servico servico = new Servico(1, "Wendell", "Tester", -5000, prestadores);
