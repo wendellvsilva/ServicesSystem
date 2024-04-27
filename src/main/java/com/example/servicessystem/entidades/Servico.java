@@ -1,6 +1,8 @@
 package com.example.servicessystem.entidades;
 
 
+import java.util.ArrayList;
+
 public class Servico {
     private int id;
     private String nome;
@@ -17,6 +19,7 @@ public class Servico {
         this.preco = preco;
         this.prestadorServico = prestadorServico;
     }
+
     public int getId() {
         return id;
     }
