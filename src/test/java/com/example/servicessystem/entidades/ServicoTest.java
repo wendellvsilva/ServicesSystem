@@ -11,7 +11,7 @@ public class ServicoTest {
     @Test
     public void testCriacaoServico() {
         PrestadorDeServico[] prestadores = new PrestadorDeServico[1];
-        prestadores[0] = new PrestadorDeServico();
+        prestadores[0] = new PrestadorDeServico("Paulo", "83282", "282","929292", null );
 
         Servico servico = new Servico(1, "Wendell", "Tester", 5000, prestadores);
 
@@ -26,7 +26,7 @@ public class ServicoTest {
     @Test(expected = PrecoInvalidoException.class)
     public void testPrecoInvalido() {
         PrestadorDeServico[] prestadores = new PrestadorDeServico[1];
-        prestadores[0] = new PrestadorDeServico();//esperar prestador
+        prestadores[0] = new PrestadorDeServico("Paulo", "83282", "282","929292", null);
 
         //criando preço negativo
         Servico servico = new Servico(1, "Wendell", "Tester", -5000, prestadores);
@@ -40,7 +40,7 @@ public class ServicoTest {
     @Test
     public void testAtualizacaoServico() {
         PrestadorDeServico[] prestadores = new PrestadorDeServico[1];
-        prestadores[0] = new PrestadorDeServico(/* fornecer argumentos do construtor */);
+        prestadores[0] = new PrestadorDeServico("Paulo", "83282", "282","929292", null);
 
         Servico servico = new Servico(1, "Wendell", "Tester", 5000, prestadores);
 
@@ -57,7 +57,7 @@ public class ServicoTest {
     @Test
     public void testListaPrestadoresNaoVazia() {
         PrestadorDeServico[] prestadores = new PrestadorDeServico[1];
-        prestadores[0] = new PrestadorDeServico();//esperar os argumentos do prestador
+        prestadores[0] = new PrestadorDeServico("Paulo", "83282", "282","929292", null);
 
         Servico servico = new Servico(1, "Wendell", "Tester", 5000, prestadores);
 
