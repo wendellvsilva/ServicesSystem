@@ -4,6 +4,26 @@ import com.example.servicessystem.entidades.PrestadorDeServico;
 public class Servico {
     private int id;
     private String nome;
+    private String categoria;
+    private double preco;
+    private PrestadorDeServico[] prestadorServico;
+
+    public Servico(int id, String nome, String categoria, double preco) {
+        this.id = id;
+        this.nome = nome;
+        this.categoria = categoria;
+        this.preco = preco;
+
+    }
+
+    public Servico(int id, String nome, String categoria, double preco, PrestadorDeServico[] prestadorServico) {
+        this.id = id;
+        this.nome = nome;
+        this.categoria = categoria;
+        this.preco = preco;
+        this.prestadorServico = prestadorServico;
+    }
+
 
     public int getId() {
         return id;
@@ -45,17 +65,6 @@ public class Servico {
         this.prestadorServico = prestadorServico;
     }
 
-    private String categoria;
 
-    public Servico(int id, String nome, String categoria, double preco, PrestadorDeServico[] prestadorServico) {
-        this.id = id;
-        this.nome = nome;
-        this.categoria = categoria;
-        this.preco = preco;
-        this.prestadorServico = prestadorServico;
-    }
-
-    private double preco;
-    private PrestadorDeServico[] prestadorServico;
 }
 

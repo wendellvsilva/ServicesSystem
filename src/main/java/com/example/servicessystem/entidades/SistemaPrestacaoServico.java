@@ -28,4 +28,28 @@ public class SistemaPrestacaoServico {
     public void adicionarServico(Servico servico, int index) {
         servicos[index] = servico;
     }
+
+    public Cliente[] getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(Cliente[] clientes) {
+        this.clientes = clientes;
+    }
+
+    public PrestadorDeServico[] getPrestadorServico() {
+        return prestadorServico;
+    }
+
+    public void setPrestadorServico(PrestadorDeServico[] prestadorServico) {
+        this.prestadorServico = prestadorServico;
+    }
+
+    public Servico[] getServicos() {
+        return servicos;
+    }
+
+    public void setServicos(Servico[] servicos) {
+        this.servicos = servicos;
+    }
 }
