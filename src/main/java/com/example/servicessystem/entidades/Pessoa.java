@@ -1,9 +1,17 @@
 package com.example.servicessystem.entidades;
 
-public abstract class  Pessoa {
+public abstract class Pessoa {
     private String nome;
     private String cpf;
     private String endereco;
+    private String telefone;
+
+    public Pessoa(String nome, String cpf, String endereco, String telefone) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+        this.telefone = telefone;
+    }
 
     public String getNome() {
         return nome;
@@ -27,5 +35,13 @@ public abstract class  Pessoa {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }
