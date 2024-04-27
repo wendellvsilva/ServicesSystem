@@ -16,9 +16,8 @@ public class TesteGeral {
         sistema.adicionarPrestadorServico(prestador1, 0);
         sistema.adicionarPrestadorServico(prestador2, 1);
 
-        //adicionando serviços
         Servico servico0 = new Servico(1, "Conserto de Vazamento", "Encanamento", 100.0);
-        Servico servico1 = new Servico(2,"Conserto de Vazamento", "Reparo em tubulações", 100);
+        Servico servico1 = new Servico(2,"Conserto de Vazamento", "Reparo em tubulações", -100);
         Servico servico2 = new Servico(3,"Instalação Elétrica", "Montagem de circuitos", 150);
         sistema.adicionarServico(servico1, 0);
         sistema.adicionarServico(servico2, 1);

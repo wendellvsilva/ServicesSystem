@@ -1,5 +1,7 @@
 package com.example.servicessystem.entidades;
 
+import com.example.servicessystem.exceptions.PrecoInvalidoException;
+
 public class Servico {
     private int id;
     private String nome;
@@ -11,14 +13,14 @@ public class Servico {
         this.id = id;
         this.nome = nome;
         this.categoria = categoria;
-        this.preco = preco;
+        this.setPreco(preco);
     }
 
     public Servico(int id, String nome, String categoria, double preco, PrestadorDeServico[] prestadorServico) {
         this.id = id;
         this.nome = nome;
         this.categoria = categoria;
-        this.preco = preco;
+        this.setPreco(preco);
         this.prestadorServico = prestadorServico;
     }
 
@@ -51,6 +53,9 @@ public class Servico {
     }
 
     public void setPreco(double preco) {
+        if (preco < 0 ){
+            throw new PrecoInvalidoException("Preço negativo");
+        }
         this.preco = preco;
     }
 
