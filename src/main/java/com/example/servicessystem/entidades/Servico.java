@@ -1,5 +1,6 @@
 package com.example.servicessystem.entidades;
 
+import com.example.servicessystem.exceptions.ListaPrestadoresVaziaException;
 import com.example.servicessystem.exceptions.PrecoInvalidoException;
 
 public class Servico {
@@ -15,6 +16,7 @@ public class Servico {
         this.categoria = categoria;
         //        this.preco = preco; deixar aqui pra possivel erro na interface gráfica
         this.setPreco(preco);
+        this.setPrestadorServico(prestadorServico);
     }
 
     public Servico(int id, String nome, String categoria, double preco, PrestadorDeServico[] prestadorServico) {
@@ -23,7 +25,8 @@ public class Servico {
         this.categoria = categoria;
         //        this.preco = preco; deixar aqui pra possivel erro na interface gráfica
         this.setPreco(preco);
-        this.prestadorServico = prestadorServico;
+        this.setPrestadorServico(prestadorServico);
+//        this.prestadorServico = prestadorServico;
     }
 
     public int getId() {
@@ -66,6 +69,10 @@ public class Servico {
     }
 
     public void setPrestadorServico(PrestadorDeServico[] prestadorServico) {
+        if (prestadorServico == null ){
+            throw new ListaPrestadoresVaziaException("Sem prestador");
+        }
+
         this.prestadorServico = prestadorServico;
     }
 
