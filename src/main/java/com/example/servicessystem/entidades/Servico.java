@@ -13,6 +13,7 @@ public class Servico {
         this.id = id;
         this.nome = nome;
         this.categoria = categoria;
+        //        this.preco = preco; deixar aqui pra possivel erro na interface gráfica
         this.setPreco(preco);
     }
 
@@ -20,6 +21,7 @@ public class Servico {
         this.id = id;
         this.nome = nome;
         this.categoria = categoria;
+        //        this.preco = preco; deixar aqui pra possivel erro na interface gráfica
         this.setPreco(preco);
         this.prestadorServico = prestadorServico;
     }
