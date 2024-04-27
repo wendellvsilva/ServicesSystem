@@ -1,5 +1,7 @@
 package com.example.servicessystem.entidades;
-import com.example.servicessystem.entidades.PrestadorDeServico;
+
+
+import java.util.ArrayList;
 
 public class Servico {
     private int id;
@@ -17,6 +19,7 @@ public class Servico {
         this.preco = preco;
         this.prestadorServico = prestadorServico;
     }
+
     public int getId() {
         return id;
     }
@@ -57,7 +60,15 @@ public class Servico {
         this.prestadorServico = prestadorServico;
     }
 
+    public static void main(String[] args) {
+        Servico servico = new Servico(1,"Wendell", "Tester",5000,null);
 
+        System.out.println("ID:" + servico.getId());
+        System.out.println("Nome:" + servico.getNome());
+        System.out.println("Categoria:" + servico.getCategoria());
+        System.out.println("Valor:" + servico.getPreco());
+        System.out.println("Prestador(analise de ter ou n)" + servico.getPrestadorServico() );
+    }
 
 }
 
