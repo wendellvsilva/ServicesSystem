@@ -5,8 +5,8 @@ module com.example.servicessystem {
 
     opens com.example.servicessystem to javafx.fxml;
     exports com.example.servicessystem;
-    exports com.example.servicessystem.controller;
-    opens com.example.servicessystem.controller to javafx.fxml;
+    exports com.example.servicessystem.gui.controller;
+    opens com.example.servicessystem.gui.controller to javafx.fxml;
     exports com.example.servicessystem.gui;
     opens com.example.servicessystem.gui to javafx.fxml;
     exports com.example.servicessystem.repositorio;

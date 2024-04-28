@@ -1,4 +1,4 @@
-package com.example.servicessystem.controller;
+package com.example.servicessystem.gui.controller;
 
 import com.example.servicessystem.Main;
 import javafx.event.ActionEvent;
